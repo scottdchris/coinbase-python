@@ -152,8 +152,8 @@ class Client(object):
             # next_uri is None when the cursor has been iterated to the last element
             content['data'].extend(prev_data)
             # If resp._content was is a bytes object, only set it as a bytes object
-            if isinstance(resp_content, bytes):
-                resp._content = json.dumps(content).decode('utf-8')
+            if isinstance(resp._content, bytes):
+                resp._content = json.dumps(content).encode('utf-8')
             else:
                 resp._content = json.dumps(content)
             return resp
