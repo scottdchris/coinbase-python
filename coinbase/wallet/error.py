@@ -93,6 +93,18 @@ class ServiceUnavailableError(APIError):
     pass
 
 
+class IdentityVerificationRequiredError(APIError):
+    pass
+
+
+class JumioVerificationRequiredError(APIError):
+    pass
+
+
+class JumioFaceMatchVerificationRequiredError(APIError):
+    pass
+
+
 def build_api_error(response, blob=None):
     """Helper method for creating errors and attaching HTTP response/request
     details to them.
@@ -122,6 +134,9 @@ _error_id_to_class = {
     'two_factor_required': TwoFactorRequiredError,
     'param_required': ParamRequiredError,
     'validation_error': ValidationError,
+    'identity_verification_required': IdentityVerificationRequiredError,
+    'jumio_verification_required': JumioVerificationRequiredError,
+    'jumio_face_match_verification_required': JumioFaceMatchVerificationRequiredError,
     'invalid_request': InvalidRequestError,
     'personal_details_required': PersonalDetailsRequiredError,
     'authentication_error': AuthenticationError,

@@ -16,7 +16,7 @@ Coinbase
 .. image:: https://img.shields.io/pypi/l/coinbase.svg
     :target: https://pypi.python.org/pypi/coinbase/
 
-The official Python library for the `Coinbase API V2 <https://developers.coinbase.com/api/v2>`_.
+A fork of the official Python library for the `Coinbase API V2 <https://developers.coinbase.com/api/v2>`_.
 
 *Important*: this library currently targets the API V2, and the OAuth client requires V2 permissions (i.e. ``wallet:accounts:read``).
 If you're still using the API V1, please use `the old version of this library <https://pypi.python.org/pypi/coinbase/1.0.4>`_.
@@ -162,26 +162,29 @@ These exceptions will be subclasses of ``coinbase.wallet.error.CoinbaseError``.
 When the error involves an API request and/or response, the error will be a subclass of ``coinbase.error.APIError``, and include ``request`` and ``response`` attributes with more information about the failed interaction.
 For full details of error responses, please refer `to the relevant API documentation <https://developers.coinbase.com/api/v2#errors>`_.
 
-=============================  ================
-Error                          HTTP Status Code
-=============================  ================
-APIError                       *
-TwoFactorRequiredError         402
-ParamRequiredError             400
-ValidationError                422
-InvalidRequestError            400
-PersonalDetailsRequiredError   400
-AuthenticationError            401
-UnverifiedEmailError           401
-InvalidTokenError              401
-RevokedTokenError              401
-ExpiredTokenError              401
-InvalidScopeError              403
-NotFoundError                  404
-RateLimitExceededError         429
-InternalServerError            500
-ServiceUnavailableError        503
-=============================  ================
+======================================== ================
+Error                                    HTTP Status Code
+======================================== ================
+APIError                                 *
+ParamRequiredError                       400
+InvalidRequestError                      400
+PersonalDetailsRequiredError             400
+IdentityVerificationRequiredError 	     400
+JumioVerificationRequiredError           400
+JumioFaceMatchVerificationRequiredError  400
+AuthenticationError                      401
+UnverifiedEmailError                     401
+InvalidTokenError                        401
+RevokedTokenError                        401
+ExpiredTokenError                        401
+TwoFactorRequiredError                   402
+InvalidScopeError                        403
+NotFoundError                            404
+ValidationError                          422
+RateLimitExceededError                   429
+InternalServerError                      500
+ServiceUnavailableError                  503
+======================================= ================
 
 
 OAuth Client

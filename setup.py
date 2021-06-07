@@ -16,12 +16,12 @@ setup(
     license='Apache 2.0',
     description='Coinbase API client library',
     long_description=README,
-    url='https://github.com/coinbase/coinbase-python/',
-    download_url='https://github.com/coinbase/coinbase-python/tarball/%s' % (
+    url='https://github.com/scottdchris/coinbase-python/',
+    download_url='https://github.com/scottdchris/coinbase-python/tarball/%s' % (
         coinbase.wallet.__version__),
     keywords=['api', 'coinbase', 'bitcoin', 'oauth2', 'client'],
     install_requires=REQUIREMENTS,
-    author='Coinbase, Inc.',
+    author='Chris Scott',
     author_email='api@coinbase.com',
     classifiers=[
         'Intended Audience :: Developers',
@@ -33,6 +33,9 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],

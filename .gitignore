@@ -7,6 +7,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+.python-version
 .env/
 env/
 bin/
@@ -53,3 +54,6 @@ coverage.xml
 *.swp
 # Sphinx documentation
 docs/_build/
+
+# IDE
+.idea/
